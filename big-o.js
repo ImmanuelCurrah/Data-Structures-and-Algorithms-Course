@@ -247,4 +247,13 @@ function logUpTo(n) {
  * Logarithm is the inverse of exponentiation
  * log base 2 (8) = 3
  * Log base 2 (value) = 2^exponent = value
+ *
+ * log === log base 2
+ *
+ * This isn't a math course so for the sake of simplicity
+ * The logarithm of a number roughly measures the number of times you can divide that number by 2 before you a value thats less than or equal to one.
+ *
+ * Logarithm time complexity is great!
+ * Meaning that it is very fast
+ * if you have a O(log n) that is a very efficient algo
  */
