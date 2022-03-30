@@ -39,5 +39,48 @@ const wakeUp = () => {
 };
 
 /**
+ * First recursive function
  *
+ * Base Case - this is where the recursion stops
+ * just like a while loop must have somewhere to stop
  */
+
+//example for ending recursion
+
+const countDownRecursively = (num) => {
+  // this give the condition for the end
+  if (num <= 0) {
+    console.log("all done");
+    return;
+  }
+  //prints the number
+  console.log(num);
+  //subtracts one from num
+  num--;
+  // recalls the function with the new number
+  countDownRecursively(num);
+};
+// how if can be written iteratively
+const countDownIteration = (num) => {
+  for (let i = num; i > 0; i--) {
+    console.log(i);
+  }
+  console.log("All done");
+};
+
+/**
+ * second example
+ */
+
+const sumRange = (num) => {
+  if (num === 1) return 1;
+  return num + sumRange(num - 1);
+};
+//can you spot the base case?
+// line 76 is the base case, it give it a number where it just returns 1
+
+//where is the difference input?
+//each time we call sumRange we are calling it will num minus one
+
+//what would happen if we didn't return?
+//infinite loop
