@@ -52,9 +52,9 @@ const mergeAttempt = (arr1, arr2) => {
 };
 
 //so I just forgot to take care of an edge case where they are different lengths or the same number
-console.log(
-  mergeAttempt([2, 3, 4, 5, 6, 7, 8], [3, 4, 5, 66, 77, 88, 99, 100])
-);
+// console.log(
+//   mergeAttempt([2, 3, 4, 5, 6, 7, 8], [3, 4, 5, 66, 77, 88, 99, 100])
+// );
 
 //videos code
 function merge(arr1, arr2) {
@@ -82,3 +82,13 @@ function merge(arr1, arr2) {
 }
 
 // console.log(merge([2, 3, 4, 5, 6, 7, 8], [3, 4, 5, 66, 77, 88, 99, 100]));
+
+const mergeSort = (arr) => {
+  if (arr.length <= 1) return arr;
+  const middle = Math.floor(arr.length / 2);
+  let left = mergeSort(arr.slice(0, middle));
+  let right = mergeSort(arr.slice(middle));
+  return merge(left, right);
+};
+
+console.log(mergeSort([4, 6, 77, 5, 4, 3, 99, 88, 111]));
